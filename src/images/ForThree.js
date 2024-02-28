@@ -1,6 +1,6 @@
 import React from "react";
 
-const CurveLine = ({ color }) => {
+const ForThree = ({ color }) => {
   return (
     <svg
       width="100%"
@@ -25,4 +25,4 @@ const CurveLine = ({ color }) => {
   );
 };
 
-export default CurveLine;
+export default ForThree;

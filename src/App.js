@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Brain from "./images/Brain";
-import CurveLine from "./images/CurveLine";
+
 import StraightLine from "./images/StraightLine";
 import LineChart from "./images/LinChart";
 import BarChart from "./images/BarChart";
@@ -9,6 +9,10 @@ import PieChart from "./images/PieChart";
 import { user1, user2, user3 } from "./images";
 import MainComponent from "./components/MainComponent/MainComponent";
 import Compensation from "./images/Compensation";
+import ForFour from "./images/ForFour";
+import ForTwo from "./images/ForTwo";
+import ForThree from "./images/ForThree";
+import ForFive from "./images/ForFive";
 
 function App() {
   const [allData, setAllData] = useState({
@@ -38,8 +42,11 @@ function App() {
     },
     circleBg: "#B8E4E2",
     nameColor: "#000",
+    forTwo: <ForTwo color="#D5D9EB" />,
+    forThree: <ForThree color="#D5D9EB" />,
+    forFour: <ForFour color="#D5D9EB" />,
+    forFive: <ForFive color="#D5D9EB" />,
 
-    curveLine: <CurveLine color="#D5D9EB" />,
     data: {
       items: [
         {
@@ -83,6 +90,56 @@ function App() {
               user1,
               user2,
               user3,
+            ],
+          },
+          compensation: {
+            img: <Compensation color="#7D89B0" />,
+            text: "Instant compensation",
+            textColor: "#000",
+            bgColor: "#fff",
+          },
+        },
+        {
+          img: <Brain color="#1F8F84" />,
+          name: "AI <br/> Moderator",
+          straightLine: <StraightLine color="#B3B8DB" />,
+          userContainer: {
+            bg: "#EAECF0",
+            users: [
+              user1,
+              user2,
+              user3,
+              user1,
+              user2,
+              user3,
+              user3,
+              user1,
+              user2,
+            ],
+          },
+          compensation: {
+            img: <Compensation color="#7D89B0" />,
+            text: "Instant compensation",
+            textColor: "#000",
+            bgColor: "#fff",
+          },
+        },
+        {
+          img: <Brain color="#1F8F84" />,
+          name: "AI <br/> Moderator",
+          straightLine: <StraightLine color="#B3B8DB" />,
+          userContainer: {
+            bg: "#EAECF0",
+            users: [
+              user1,
+              user2,
+              user3,
+              user1,
+              user2,
+              user3,
+              user3,
+              user1,
+              user2,
             ],
           },
           compensation: {

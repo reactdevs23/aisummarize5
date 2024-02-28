@@ -1,7 +1,14 @@
 import React from "react";
 import classes from "./MainComponent.module.css";
 
-const MainComponent = ({ dashBoard, data, curveLine }) => {
+const MainComponent = ({
+  dashBoard,
+  data,
+  forTwo,
+  forThree,
+  forFour,
+  forFive,
+}) => {
   return (
     <div
       className="min-h-screen flex flex-col items-center justify-center w-full"
@@ -36,9 +43,33 @@ const MainComponent = ({ dashBoard, data, curveLine }) => {
 
         <div className={classes.container}>
           <div className={classes.brainWrapper}>
-            <div className={classes.curveLine}>{curveLine}</div>
+            {data.items.length === 2 && (
+              <div className={[classes.curveLine, classes.forTwo].join(" ")}>
+                {forTwo}
+              </div>
+            )}
+            {data.items.length === 3 && (
+              <div className={[classes.curveLine, classes.forThree].join(" ")}>
+                {forThree}
+              </div>
+            )}
+            {data.items.length === 4 && (
+              <div className={[classes.curveLine, classes.forFour].join(" ")}>
+                {forFour}
+              </div>
+            )}{" "}
+            {data.items.length === 5 && (
+              <div className={[classes.curveLine, classes.forFive].join(" ")}>
+                {forFive}
+              </div>
+            )}
             {data.items.map((el, i) => (
-              <div className={classes.mycontainer}>
+              <div
+                className={[
+                  classes.mycontainer,
+                  classes[`myContainer${i + 1}`],
+                ].join(" ")}
+              >
                 <div className={classes.circle} key={i}>
                   {" "}
                   <p
