@@ -42,6 +42,8 @@ function App() {
     },
     circleBg: "#B8E4E2",
     nameColor: "#000",
+
+    //curveLine
     forTwo: <ForTwo color="#D5D9EB" />,
     forThree: <ForThree color="#D5D9EB" />,
     forFour: <ForFour color="#D5D9EB" />,
